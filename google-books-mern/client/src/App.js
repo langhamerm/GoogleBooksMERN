@@ -1,9 +1,15 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import Books from "./pages/Books";
-import Detail from "./pages/Detail";
-import NoMatch from "./pages/NoMatch";
-import Nav from "./components/Nav";
+import Search from "./pages/search/index";
+import Saved from "./pages/saved/index";
+import Detail from "./pages/detail/index";
+import NoMatch from "./pages/nomatch/index";
+import Nav from "./components/Nav/index";
+// // Material UI
+// import NavBar from './components/NavBar'
+// import BookList from './components/Booklist.js'
+// import Book from './components/Book.js'
+
 
 function App() {
   return (
@@ -11,8 +17,8 @@ function App() {
       <div>
         <Nav />
         <Switch>
-          <Route exact path="/" component={Books} />
-          <Route exact path="/books" component={Books} />
+          <Route exact path="/" component={Saved} />
+          <Route exact path="/saved" component={Saved} />
           <Route exact path="/books/:id" component={Detail} />
           <Route component={NoMatch} />
         </Switch>
@@ -22,3 +28,32 @@ function App() {
 }
 
 export default App;
+
+
+
+
+
+
+
+
+
+
+// function App (Router) {
+//   return (
+//     <Router>
+//       <div>
+//           <Route exact path="/" component={Search} />
+//           <Route exact path="/search" component={Search} />
+//           <Route exact path="/saved" component={Saved} />
+
+
+
+//       {/* <NavBar />
+//       <BookList />
+//       <Book /> */}
+
+
+//       </div>
+//     </Router>
+//   );
+// }
